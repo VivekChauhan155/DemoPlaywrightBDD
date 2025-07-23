@@ -1,0 +1,22 @@
+{
+  "name": "demo14",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.6.0",
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^24.0.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.0"
+  }
+}
