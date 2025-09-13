@@ -1,13 +1,13 @@
 // support/fixtures.ts
 import { Browser, BrowserContext, Page } from '@playwright/test';
-import { LoginPage } from '../pages/loginPage';
+import { AllScenariosPage } from '../pages/allScenariosPage';
 
 export class TestFixtures {
   browser!: Browser;
   context!: BrowserContext;
   page!: Page;
 
-  loginPage!: LoginPage;
+  allScenariosPage!: AllScenariosPage;
 
   setBrowser(browser: Browser) {
     this.browser = browser;
@@ -22,6 +22,6 @@ export class TestFixtures {
   }
 
   initPages() {
-    this.loginPage = new LoginPage(this.page);
+    this.allScenariosPage = new AllScenariosPage(this.page);
   }
 }

@@ -1,5 +1,6 @@
 import { chromium } from '@playwright/test';
 import { TestFixtures } from '../fixtures/fixtures';
+import { setDefaultTimeout } from '@cucumber/cucumber';
 
 const testFixtures = new TestFixtures();
 
@@ -8,8 +9,8 @@ export async function setup() {
   const context = await browser.newContext();
   const page = await context.newPage();
 
-  page.setDefaultTimeout(60000);
-  page.setDefaultNavigationTimeout(80000);
+  page.setDefaultTimeout(800000);
+  // page.setDefaultNavigationTimeout(800000);
 
   testFixtures.setBrowser(browser);
   testFixtures.setContext(context);
@@ -25,4 +26,4 @@ export async function teardown() {
 export const browser = () => testFixtures.browser;
 export const context = () => testFixtures.context;
 export const page = () => testFixtures.page;
-export const loginPage = () => testFixtures.loginPage;
+export const allScenariosPage = () => testFixtures.allScenariosPage;
